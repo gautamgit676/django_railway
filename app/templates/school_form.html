@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>School Form Page</h1>
+
+   <form method="POST" enctype="multipart/form-data" >
+    {% csrf_token %}
+
+    <input type="text" name="name" required>
+    <input type="text" name="address" required>
+    <input type="number" name="established_year" required>
+    <input type="file" name="photo">
+    
+    <button type="submit">Save</button>
+</form>
+
+    <p>Welcome to the School Form Page.</p>
+    
+</body>
+</html>

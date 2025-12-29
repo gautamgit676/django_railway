@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1>School Data Page</h1>
+
+
+    <!-- creaye school form -->
+    <!-- <a href="{% url 'school_form' %}">Add New School</a> -->
+
+    
+    <!-- <form action="POST">
+        {% csrf_token %}    
+        <input type="text" name="name" placeholder="School Name">
+        <input type="text" name="address" placeholder="School Address">
+        <input type="number" name="established_year" placeholder="Established Year">
+        <input type="file" name="photo" placeholder="School Photo">
+        <input type="submit" value="Submit">
+    </form>
+     -->
+    
+
+    <p>Welcome to the School Data Page.</p>
+    {% for i in school %}
+      {{i.name}} - {{i.address}} - {{i.established_year}} 
+      {{i.photo.url}} <br>
+      <img src="{{i.photo.url}}" alt="{{i.name}}" width="100" height="100">     
+      <br>
+    {% endfor %}
+   
+
+</body>
+</html
